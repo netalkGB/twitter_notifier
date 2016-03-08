@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
+    </content>
+    <orderEntry type="jdk" jdkName="ruby-2.2.3-p173" jdkType="RUBY_SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.4.0, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="buftok (v0.2.0, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="equalizer (v0.0.10, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday (v0.9.2, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http (v1.0.2, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http-cookie (v1.0.2, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http-form_data (v1.0.1, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http_parser.rb (v0.6.0, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="memoizable (v0.4.2, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.0.0, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="naught (v1.1.0, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simple_oauth (v0.3.1, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="twitter (v5.16.0, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="unf (v0.1.4, ruby-2.2.3-p173) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.7.2, ruby-2.2.3-p173) [gem]" level="application" />
+  </component>
+</module>
