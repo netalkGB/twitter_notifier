@@ -10,7 +10,6 @@ def sendmail subject_,body_
   mail.charset = 'utf-8'
   mail.from ID
   mail.to ID
-
   mail.delivery_method(:smtp, { :address              => "smtp.gmail.com",
                                 :port                 => 587,
                                 :domain               => "smtp.gmail.com",
