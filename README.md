@@ -25,7 +25,8 @@ notifierという名前だがこのプログラム自体には通知する機能
 ## 設定
 Twitterのコンシューマーキーとコンシューマーシークレット、GmailのIDは用意しておく
 settings.rbにTwitterのコンシューマーキーとコンシューマーシークレット、GmailのID(@gmail.comを含めたメールアドレス)、パスワードとログの出力先を書く
-### gemのインストール(bundlerが必要)
+### gemのインストール
+gemコマンドでbundlerをインストールしておく
 ```
 bundle install --path vendor/bundle
 ```
