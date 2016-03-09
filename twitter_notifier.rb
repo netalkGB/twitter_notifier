@@ -70,7 +70,7 @@ begin
       str = ''
       str = str + "ブロックされた（した）可能性あり\n"
       blocked.each do |i|
-        str = str + "@#{i.screen_name} (#{i.id}) #{i.name}"
+        str = str + "@#{i.screen_name} (#{i.id}) #{i.name}\n"
       end
       File.open(Log_path,"a") do |file|
         file.puts "#{Time.now.to_s} #{str}"
@@ -84,7 +84,7 @@ begin
       str = ''
       str = str + "新たなフォロワー\n"
       newfollowers.each do |i|
-        str = str + "@#{i.screen_name} (#{i.id}) #{i.name}"
+        str = str + "@#{i.screen_name} (#{i.id}) #{i.name}\n"
       end
       File.open(Log_path,"a") do |file|
         file.puts "#{Time.now.to_s} #{str}"
@@ -105,7 +105,7 @@ begin
       str = ''
       str = str + "消えたフォロワー\n"
       gone.each do |i|
-        str = str + "@#{i.screen_name} (#{i.id}) #{i.name}"
+        str = str + "@#{i.screen_name} (#{i.id}) #{i.name}\n"
       end
       File.open(Log_path,"a") do |file|
         file.puts "#{Time.now.to_s} #{str}"
