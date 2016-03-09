@@ -1,0 +1,7 @@
+*.yml
+*config
+.idea
+.bundle
+vendor
+Gemfile.lock
+twitter_notifier.iml
