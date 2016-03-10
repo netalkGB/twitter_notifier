@@ -27,12 +27,13 @@ Twitterのコンシューマーキーとコンシューマーシークレット�
 settings.rbにTwitterのコンシューマーキーとコンシューマーシークレット、GmailのID(@gmail.comを含めたメールアドレス)、パスワードとログの出力先を書く
 ### gemのインストール
 gemコマンドでbundlerをインストールしておく
+
 ```
 bundle install --path vendor/bundle
 ```
 ### 起動
-初回起動時は認証が必要です
+初回起動時は認証が必要
 ```
 ruby twitter_notifier.rb
 ```
-cronなどを用いて定期的に実行するとよい
+cronなどを用いて定期的に実行する
