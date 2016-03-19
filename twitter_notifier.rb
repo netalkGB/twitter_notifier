@@ -1,27 +1,8 @@
 require './settings.rb'
 require './Auth.rb'
 require 'yaml'
-require 'mail'
 require 'bundler'
 Bundler.require
-
-def sendmail subject_,body_
-  mail = Mail.new
-  mail.charset = 'utf-8'
-  mail.from ID
-  mail.to ID
-  mail.delivery_method(:smtp, { :address              => "smtp.gmail.com",
-                                :port                 => 587,
-                                :domain               => "smtp.gmail.com",
-                                :user_name            => ID,
-                                :password             => PASSWORD,
-                                :authentication       => :plain,
-                                :enable_starttls_auto => true   })
-  mail.subject subject_
-  mail.body body_
-  mail.deliver
-end
-
 
 unless File.exist? './.tw_config'
   auth = Auth.new Consumer_key, Consumer_secret
@@ -43,6 +24,8 @@ client = Twitter::REST::Client.new do |config|
   config.access_token        = tokens[:access_token]
   config.access_token_secret = tokens[:access_token_secret]
 end
+
+my_id = client.user.id
 
 begin
   friends = []
@@ -74,7 +57,8 @@ begin
       File.open(Log_path,"a") do |file|
         file.puts "#{Time.now.to_s} #{str}"
       end
-      sendmail "ブロック検出: #{blocked.size}", str
+      client.create_direct_message my_id, "ブロック検出: #{blocked.size}\n" + str
+
     end
 
     # 新たなフォロワー
@@ -88,8 +72,7 @@ begin
       File.open(Log_path,"a") do |file|
         file.puts "#{Time.now.to_s} #{str}"
       end
-      sendmail "新たなフォロワー: #{newfollowers.size}", str
-
+      client.create_direct_message my_id, "新たなフォロワー: #{newfollowers.size}\n" + str
     end
 
     # 消えたフォロワー
@@ -109,7 +92,7 @@ begin
       File.open(Log_path,"a") do |file|
         file.puts "#{Time.now.to_s} #{str}"
       end
-      sendmail "消えたフォロワー: #{gone.size}", str
+      client.create_direct_message my_id, "消えたフォロワー: #{gone.size}\n" + str
     end
 
   end
