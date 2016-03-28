@@ -23,9 +23,9 @@ notifierという名前だがこのプログラム自体には通知する機能
 ```
 ## 設定
 Twitterのコンシューマーキーとコンシューマーシークレットは用意しておく
-settings.rbにTwitterのコンシューマーキーとコンシューマーシークレットとログの出力先を書く
+環境変数TWITTER_CONSUMER_KEYにコンシューマーキー、CONSUMER_SECRETにコンシューマーシークレットを設定する
 ### gemのインストール
-gemコマンドでbundlerをインストールしておく
+bundlerはインストールしておく
 
 ```
 bundle install --path vendor/bundle

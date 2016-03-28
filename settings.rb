@@ -1,3 +1,1 @@
-Consumer_key = ''
-Consumer_secret = ''
-Log_path = ""
+Log_path = "./log"

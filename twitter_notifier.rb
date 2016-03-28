@@ -5,7 +5,7 @@ require 'bundler'
 Bundler.require
 
 unless File.exist? './.tw_config'
-  auth = Auth.new Consumer_key, Consumer_secret
+  auth = Auth.new ENV['TWITTER_CONSUMER_KEY'], ENV['CONSUMER_SECRET']
   puts "Go: #{auth.authorize_url}"
   print 'Please enter a PIN: '
   auth.pin gets.to_i
@@ -19,8 +19,8 @@ if File.exist? './.tw_config'
 end
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = Consumer_key
-  config.consumer_secret     = Consumer_secret
+  config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
+  config.consumer_secret     = ENV['CONSUMER_SECRET']
   config.access_token        = tokens[:access_token]
   config.access_token_secret = tokens[:access_token_secret]
 end
